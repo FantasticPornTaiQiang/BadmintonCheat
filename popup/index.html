@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <script src="../script/config.js"></script>
+
+    <div class="vwvh">
+      <h2>一键抢场</h2>
+      <div id="link" class="link">网址</div>
+      <div id="enabled">未开启</div>
+
+      <div class="form">
+        <div class="row">
+          <label for="date">日期</label>
+          <input type="date" id="date" />
+        </div>
+
+        <br />
+
+        <div class="row">
+          <label for="starttime">时间</label>
+          <input type="number" min="8" max="20" step="2" id="starttime" />
+          <span class="dian">点</span>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <label for="where">场馆</label>
+          <select id="where" name="where" class="cursor-p">
+            <option value="117">游泳馆</option>
+            <option value="45">光体</option>
+            <option value="69">西边</option>
+          </select>
+        </div>
+
+        <br />
+
+        <div class="row wrap">
+          <label>场地</label>
+          <input id="which" />
+          <label class="hint margin-l padding-v">
+            自选场地，多个场地以/隔开，从0开始，例如：0/1/5/8</label
+          >
+          <label class="hint margin-l">游泳馆：9；光体：22；西边：9</label>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <label>同伴</label>
+          <div class="max-width-flex">
+            <div class="row padding-v">
+              <label>名字</label>
+              <input placeholder="" id="name" autocomplete="off" />
+            </div>
+
+            <div class="row padding-v">
+              <label>学号</label>
+              <input placeholder="" id="uid" autocomplete="off" />
+            </div>
+
+            <div class="row padding-v">
+              <label>密码</label>
+              <input placeholder="" id="pwd" autocomplete="off" />
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <label>保底</label>
+          <select id="ensure" name="ensure" class="cursor-p">
+            <option value="true">我要保底</option>
+            <option value="false">我不要保底</option>
+          </select>
+        </div>
+        <label class="hint margin-l margin-v"
+          >开启保底后若自选场地被占，则自动抢其它空场</label
+        >
+
+        <br />
+
+        <div class="row margin-t">
+          <button class="save" id="save">开抢！</button>
+          <button class="save disable" id="disable">不抢了</button>
+          <span id="save-toast" class="save-toast"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vwvh bg"></div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "name": "badminton cheat",
+  "version": "1.0.0",
+  "manifest_version": 3,
+
+  "description": "",
+  "icons": {
+      
+  },
+  "content_scripts": [
+    {
+      "js": ["script/config.js", "script/redirect.js"],
+      "matches": [
+        "http://pecg.hust.edu.cn/cggl/front/yuyuexz",
+        "https://pecg.hust.edu.cn/cggl/front/yuyuexz"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["script/cheat.js"],
+      "matches": [
+        "https://pecg.hust.edu.cn/cggl/front/syqk*",
+        "http://pecg.hust.edu.cn/cggl/front/syqk*"
+      ]
+    },
+    {
+      "js": ["script/pay.js"],
+      "matches": [
+        "https://pecg.hust.edu.cn/cggl/front/step2",
+        "http://pecg.hust.edu.cn/cggl/front/step2"
+      ]
+    }
+  ],
+  "permissions": ["storage", "tabs"],
+  "action": {
+		"default_icon": "img/logo.png",
+		"default_title": "One Key Badminton",
+		"default_popup": "popup/index.html"
+	}
+}
