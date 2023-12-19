@@ -19,9 +19,9 @@ chrome.storage.local.get(['config'], ({ config }) => {
         },
         where: 117, //场地编号：45：光体，69：西边，117：游泳馆
         who: {
-            pwd: "Fb8739B9B4D",
-            name: "周毅",
-            uid: "M202276594"
+            pwd: "",
+            name: "",
+            uid: ""
         },
         which: [0],
         ensure: true,
